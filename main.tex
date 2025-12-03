@@ -1,38 +1,12 @@
 %%%%%%%%%%%%%%%%%
-% This is an sample CV template created using altacv.cls
-% (v1.3, 10 May 2020) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
-% (v1.7.1b, 11 Jan 2024) forked by Nicolás Omar González Passerino (nicolas.passerino@gmail.com)
-%
-%% It may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in
-%%    http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 2003/12/01 or later.
+% Dylan Straaijer - CV
+% Based on AltaCV template version: v1.7.1b, 11 Jan 2024
 %%%%%%%%%%%%%%%%
 
 %% If you need to pass whatever options to xcolor
-\PassOptionsToPackage{dvipsnames}{xcolor}
-
-%% If you are using \orcid or academicons
-%% icons, make sure you have the academicons
-%% option here, and compile with XeLaTeX
-%% or LuaLaTeX.
-% \documentclass[10pt,a4paper,academicons]{altacv}
-
-%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
-% \documentclass[10pt,a4paper,normalphoto]{altacv}
-
-%% Fork (before v1.6.5a): CV dark mode toggle enabler to use a inverted color palette.
-%% Use the "darkmode" option if you want a color palette used to 
-% \documentclass[10pt,a4paper,ragged2e,withhyper,darkmode]{altacv}
+% \PassOptionsToPackage{dvipsnames}{xcolor}
 
 \documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
-
-%% AltaCV uses the fontawesome5 and academicons fonts
-%% and packages.
-%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
 
 %% Fork v1.6.5c: Overwriting sloppy environment to ignore any spaces and be used to solve overlapping cvtags
 \newenvironment{sloppypar*}{\sloppy\ignorespaces}{\par}
@@ -58,7 +32,6 @@
   \renewcommand{\familydefault}{\sfdefault}
 \fi
 
-% Fork (before v1.6.5a): Change the color codes to test your personal variant on any mode
 \ifdarkmode%
   \definecolor{PrimaryColor}{HTML}{C69749}
   \definecolor{SecondaryColor}{HTML}{D49B54}
@@ -100,82 +73,101 @@
 %% \addbibresource{main.bib}
 
 \begin{document}
-    \name{John Doe}
-    \tagline{Test Developer}
+    \name{Dylan Straaijer}
+    \tagline{Lead Developer \& Software Architect}
     %% You can add multiple photos on the left or right
-    \photoL{4cm}{john-doe}
+    \photoL{4cm}{dylan}
 
     \personalinfo{
-        \email{john_doe@email.com}\smallskip
-        \phone{+01-2345-678901}
-        \location{City, Country}\\
-        \linkedin{linkedinUser}
-        \github{githubUser}
-        \npm{npmUser}
-        \dev{devtoUser}
+        \email{db.straaijer@gmail.com}\smallskip
+        % \phone{+01-2345-678901}
+        \location{Hoorn, Nederland}
+        % \linkedin{linkedinUser}
+        % \github{githubUser}
         %\homepage{nicolasomar.me}
-        %\medium{nicolasomar}
-        %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
-        % \orcid{0000-0000-0000-0000}
-        %% You can add your own arbtrary detail with
-        %% \printinfo{symbol}{detail}[optional hyperlink prefix]
-        % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
-        %% Or you can declare your own field with
-        %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
-        % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
-        % \gitlab{your_id}
     }
     
     \makecvheader
     %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
     % \AtBeginEnvironment{itemize}{\small}
     
-    %% Set the left/right column width ratio to 6:4.
+    %% Set columnratio (left small, right wide).
     \columnratio{0.25}
 
     % Start a 2-column paracol. Both the left and right columns will automatically
     % break across pages if things get too long.
     \begin{paracol}{2}
+        % -----------------------------------------------------------
+        % LINKER KOLOM
+        % -----------------------------------------------------------
+    
         % ----- TECH STACK -----
-        \cvsection{TECH STACK}
-            %% Fork v1.6.5c: The sloppypar* environment is used to avoid tags overlapping with section width
-            \begin{sloppypar*}
-                %% Fork 1.7.1b: Now in case you want to highlight any tag, just add a '/true' property next to its text and it will change tag's text and border colors.
-                \cvtags{One/true, Two, Three/true, Four, Five/true, Six, Seven/true, Eight, Nine/true, Ten}
-                \medskip
-
-                \cvtags{Red, Yellow/true, Blue, Green/true, Violet, Orange/true}
-            \end{sloppypar*}
+        \cvsection{Tech Stack}
+        
+            % Om de tags kleiner te maken, zetten we alles in \footnotesize
+            {\footnotesize
+            
+            \textbf{Languages}\\
+            \smallskip
+            % Focus: Python & PHP voor backend, SQL voor data. Bash voor server.
+            \cvtags{Python/true, PHP/true, Java, C++, SQL/true, JavaScript/true, Bash/true, C}
+            \par\medskip
+            
+            \textbf{Cloud \& DevOps}\\
+            \smallskip
+            % Focus: AWS stack & CI/CD is key voor Lead rol.
+            \cvtags{Lambda/true, Terraform/true, SQS/true, SNS/true, Docker/true, GitLab \& GitHub/true, Jenkins, IAM \& Identity Center/true, S3, DynamoDB/true, Heroku}
+            \par\medskip
+            
+            \textbf{Frameworks \& Platforms}\\
+            \smallskip
+            % Focus: Je huidige werkervaring.
+            \cvtags{Odoo/true, Mendix/true, Laravel/true, Bessy/true, Omnext/true, WordPress, Postman/true, Typer/true, Podio, Zapier}
+            \par\medskip
+            
+            \textbf{Security \& Architectuur}\\
+            \smallskip
+            % Focus: Dit maakt jou senior.
+            \cvtags{JWT/true, mTLS/true, ISO27001/true, Microservices/true, REST/true}
+            \par\medskip
+            
+            \textbf{Academisch \& Overig}\\
+            \smallskip
+            % Wel noemen (laat intelligentie zien), niet highlighten.
+            \cvtags{Assembly, LaTeX, Prolog, R, MatLab, Mathematica}
+            
+            } % Einde van footnotesize scope
+        
         % ----- TECH STACK -----
         
-        % ----- LEARNING -----
-        \cvsection{Learning}
-            \begin{sloppypar*}
-                \cvtags{Uno, Dos/true, Tres, Cuatro/true, Cinco, Seis/true, Siete, Ocho/true, Nueve, Diez/true}
-                \medskip
+        % % ----- LEARNING -----
+        % \cvsection{Learning}
+        %     \begin{sloppypar*}
+        %         \cvtags{Uno, Dos/true, Tres, Cuatro/true, Cinco, Seis/true, Siete, Ocho/true, Nueve, Diez/true}
+        %         \medskip
 
-                \cvtags{Rojo/true, Amarillo, Azul/true, Verde, Violeta/true, Naranja, Marron/true, Blanco, Gris/true, Negro}
-            \end{sloppypar*}
-        % ----- LEARNING -----
+        %         \cvtags{Rojo/true, Amarillo, Azul/true, Verde, Violeta/true, Naranja, Marron/true, Blanco, Gris/true, Negro}
+        %     \end{sloppypar*}
+        % % ----- LEARNING -----
         
         % ----- LANGUAGES -----
-        \cvsection{Languages}
-            \cvlang{Lang 1}{Native}\\
-            \divider
+        \cvsection{Talen}
+            \cvlang{Nederlands}{Moedertaal}
+            \medskip
 
-            \cvlang{Lang 2}{Basic / A2}
-            \bigskip
-            %% Yeah I didn't spend too much time making all the
-            %% spacing consistent... sorry. Use \smallskip, \medskip,
-            %% \bigskip, \vpsace etc to make ajustments.
+            \cvlang{Engels}{Vloeiend / C1-C2}
+            {\footnotesize (Tweetalig VWO \& Engelstalige studie)}
+            \medskip
+
+            \cvlang{Spaans}{Basis / A1}
         % ----- LANGUAGES -----
             
         % ----- REFERENCES -----
-        \cvsection{References}
-            \cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
-            \divider
+        % \cvsection{References}
+        %     \cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
+        %     \divider
 
-            \cvref{Boss\ Gamma Delta}{Business}{g.delta@business.com}
+        %     \cvref{Boss\ Gamma Delta}{Business}{g.delta@business.com}
         % ----- REFERENCES -----
         
         % ----- MOST PROUD -----
@@ -210,43 +202,87 @@
         \switchcolumn
         
         % ----- ABOUT ME -----
-        \cvsection{About Me}
+        \cvsection{Profiel}
             \begin{quote}
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Analytisch sterke en veelzijdige Lead Developer met een brede technische achtergrond. Ik ben geen 'one-trick pony', maar een generalist die complexe materie en nieuwe programmeertalen razendsnel doorgrondt. Met een academische achtergrond (Computer Science) en jarenlange ervaring in het opschalen van bedrijven, ben ik in staat om architectuur-beslissingen te nemen over de volledige breedte van de stack. Of het nu gaat om cloud-native oplossingen, legacy-migraties of security-implementaties: ik kies de tool die het beste past bij het probleem. Ik zoek een uitdagende omgeving waar technisch vernuft, robuustheid en veiligheid centraal staan.
             \end{quote}
         % ----- ABOUT ME -----
         
         % ----- EXPERIENCE -----
-        \cvsection{Experience}
-            \cvevent{Charge}{Company}{Mm YYYY -- Mm YYYY}{City, Country}
+        \cvsection{Werkervaring}
+            \cvevent{Lead Developer \& Software Architect}{Winst uit je woning}{Januari 2023 -- Heden}{Haarlem}
             \begin{itemize}
-                \item First achievement
-                \item Second achievement
-                \item Third achievement
+                \item Verantwoordelijk voor de technische visie, security en de transitie naar een event-driven architectuur.
+                \item \textbf{Adaptievermogen:} In korte tijd diverse stacks (o.a. Odoo ERP, Mendix en AWS) eigen gemaakt om de nieuwe architectuur te leiden en verschillende systemen te integreren.
+                \item \textbf{Security:} Lead in security-audits met grootbanken (ING). Implementatie van ISO27001 maatregelen, mTLS en Custom JWT flows.
+                \item \textbf{Project GRIP:} Herontwerp van het core data model en implementatie van een message broker voor robuuste data-uitwisseling.
             \end{itemize}
             \divider
             
-            \cvevent{Charge}{Company}{Mm YYYY -- Mm YYYY}{City, Country}
+            \cvevent{IT Manager, Lead developer \& Security Officer}{Winst uit je woning}{Maart 2020 -- December 2022}{Haarlem}
             \begin{itemize}
-                \item First achievement
-                \item Second achievement
-                \item Third achievement
+                \item Opbouw en professionalisering van de interne IT-afdeling (gegroeid naar 7 werknemers). Introductie van CI/CD, Unit Testing en standaarden.
+                \item \textbf{ISO27001:} Als Security Officer het ISMS opgezet en het bedrijf succesvol door de certificering geleid.
+                \item Initiatiefnemer voor de transitie van legacy (Low-code/Podio) naar een volwassen Enterprise architectuur.
+            \end{itemize}
+            \divider
+
+            \cvevent{Eigenaar / Full Stack Developer}{CRMDev (Freelance)}{Januari 2019 -- Maart 2020}{Hoorn}
+            \begin{itemize}
+                \item Greenfield development van een schaalbaar processysteem (PHP, SQL, API's).
+                \item Verantwoordelijk voor full-stack: van Linux serverbeheer en hosting tot backend logica en frontend.
+            \end{itemize}
+            \divider
+
+            \newpage
+
+            \cvevent{Lead developer / Solution Architect}{CRM Fabriek}{2018 (6 maanden)}{Amsterdam}
+            \begin{itemize}
+                \item Technisch aansturen van een team van 4 developers. Vertalen van business requirements naar technische oplossingen.
             \end{itemize}
         % ----- EXPERIENCE -----
         
         % ----- EDUCATION -----
-        \cvsection{Education}
-            \cvevent{Title}{Institution}{Mm YYYY -- Mm YYYY}{City, Country}
+        \cvsection{Opleidingen}
+            \cvevent{Bachelor Computer Science (Niet afgerond)}{Vrije Universiteit}{2017 -- 2019}{Amsterdam}
             \begin{itemize}
-                \item GPA: 1,23
+                \item 123 ECTS behaald, gemiddeld cijfer: \textbf{7,6}.
+                \item Focus: Algoritmes, Datastructuren, Wiskunde (Java, C++, Python, Assembly).
+                \item Studie gestaakt voor ondernemerschap; academisch denkniveau aantoonbaar.
             \end{itemize}
             \divider
             
-            \cvevent{Title}{Institution}{Mm YYYY -- Mm YYYY}{City, Country}
-            \begin{itemize}
-                \item GPA: 1,23
-            \end{itemize}
+            \cvevent{Bachelor Informatica (Propedeuse fase)}{Universiteit van Amsterdam}{2016 -- 2017}{Amsterdam}
+            % \begin{itemize}
+            %     \item GPA: 1,23
+            % \end{itemize}
+            \divider
+
+            \cvevent{Tweetalig VWO (Natuur \& Gezondheid)}{Het Werenfridus}{2010 -- 2016}{Hoorn}
+            % \begin{itemize}
+                % \item 
+            % \end{itemize}
         % ----- EDUCATION -----
+
+        % ----- CERTIFICATES -----
+        \cvsection{Certificaten}
+            \cvevent{Mendix Developer Certification: Rapid Developer}{Mendix Academy}{2025}{}
+            \begin{itemize}
+                \item Behaald ter formalisering van jarenlange praktijkervaring met Mendix development en integraties.
+            \end{itemize}
+            \divider
+
+            \cvevent{Informatiebeveiliging \& AVG}{Goodhabitz}{2024}{}
+            \begin{itemize}
+                \item Verdieping op het gebied van compliance en awareness in het kader van ISO27001.
+            \end{itemize}
+            \divider
+
+            \cvevent{Cambridge English: Advanced (CAE)}{Cambridge English}{2014}{}
+            \begin{itemize}
+                \item Internationaal erkend certificaat op C1-niveau, behaald als onderdeel van tweetalig onderwijs.
+            \end{itemize}
+        % ----- CERTIFICATES -----
         
         % ----- PROJECTS -----
         \cvsection{Projects}
