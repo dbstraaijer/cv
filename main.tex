@@ -137,21 +137,10 @@
             \cvtags{Assembly, LaTeX, Prolog, R, MatLab, Mathematica}
             
             } % Einde van footnotesize scope
-        
         % ----- TECH STACK -----
-        
-        % % ----- LEARNING -----
-        % \cvsection{Learning}
-        %     \begin{sloppypar*}
-        %         \cvtags{Uno, Dos/true, Tres, Cuatro/true, Cinco, Seis/true, Siete, Ocho/true, Nueve, Diez/true}
-        %         \medskip
 
-        %         \cvtags{Rojo/true, Amarillo, Azul/true, Verde, Violeta/true, Naranja, Marron/true, Blanco, Gris/true, Negro}
-        %     \end{sloppypar*}
-        % % ----- LEARNING -----
-        
         % ----- LANGUAGES -----
-        \cvsection{Talen}
+        \cvsection{Taal}
             \cvlang{Nederlands}{Moedertaal}
             \medskip
 
@@ -161,37 +150,47 @@
 
             \cvlang{Spaans}{Basis / A1}
         % ----- LANGUAGES -----
-            
-        % ----- REFERENCES -----
-        % \cvsection{References}
-        %     \cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
-        %     \divider
 
-        %     \cvref{Boss\ Gamma Delta}{Business}{g.delta@business.com}
-        % ----- REFERENCES -----
-        
-        % ----- MOST PROUD -----
-        % \cvsection{Most Proud of}
-        
-        % \cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}\\
-        % \divider
-        % \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}\\
-        % \divider
-        % \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
-        % ----- MOST PROUD -----
-        
-        % \cvsection{A Day of My Life}
-        
-        % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
-        % \wheelchart{outer radius}{inner radius}{
-        % comma-separated list of value/text width/color/detail}
-        % \wheelchart{1.5cm}{0.5cm}{%
-        %   6/8em/accent!30/{Sleep,\\beautiful sleep},
-        %   3/8em/accent!40/Hopeful novelist by night,
-        %   8/8em/accent!60/Daytime job,
-        %   2/10em/accent/Sports and relaxation,
-        %   5/6em/accent!20/Spending time with family
-        % }
+        \newpage
+
+        % ----- NEVENACTIVITEITEN & INTERESSES -----
+        \cvsection{Extra}
+
+            {\footnotesize
+                % Mentorschap (Bovenaan omdat dit leiderschap toont)
+                \textbf{Mentorschap}
+                \smallskip
+                \begin{itemize}
+                    \item \textbf{Mentor (STORM):} Begeleider van een groep van 25 eerstejaars studenten (2019 -- 2020).
+                \end{itemize}
+                \medskip
+            
+                % Het samengevoegde Tech-blok
+                \textbf{Tech \& Home Lab}
+                \smallskip
+                \begin{itemize}
+                    \item \textbf{Smart Home:} Beheer van een divers IoT-ecosysteem (Ring, Google Nest, Alexa, Philips Hue) met focus op integratie en security.
+                    \item \textbf{Network:} Draaien van custom router firmware en network-wide ad-blocking tunnels voor privacy en beveiliging.
+                    \item \textbf{Hardware:} Jarenlange ervaring met modificatie en custom firmware op smartphones en consoles (Nintendo, Xbox, PlayStation).
+                \end{itemize}
+                \medskip
+            
+                % Sport
+                \textbf{Sport \& Team}
+                \smallskip
+                \begin{itemize}
+                    \item Actief in competitieverband: veldvoetbal, twee zaalvoetbalteams en padel.
+                \end{itemize}
+                \medskip
+            
+                % Reizen
+                \textbf{Reizen \& Avontuur}
+                \smallskip
+                \begin{itemize}
+                    \item Avontuurlijke reizen, waaronder wildkamperen in Zweden en rondreizen door o.a. Thailand, Zuid-Korea, Georgië en de VS.
+                \end{itemize}
+            } % Einde van footnotesize scope
+        % ----- NEVENACTIVITEITEN & INTERESSES -----
         
         % use ONLY \newpage if you want to force a page break for
         % ONLY the current column
@@ -204,7 +203,7 @@
         % ----- ABOUT ME -----
         \cvsection{Profiel}
             \begin{quote}
-                Analytisch sterke en veelzijdige Lead Developer met een brede technische achtergrond. Ik ben geen 'one-trick pony', maar een generalist die complexe materie en nieuwe programmeertalen razendsnel doorgrondt. Met een academische achtergrond (Computer Science) en jarenlange ervaring in het opschalen van bedrijven, ben ik in staat om architectuur-beslissingen te nemen over de volledige breedte van de stack. Of het nu gaat om cloud-native oplossingen, legacy-migraties of security-implementaties: ik kies de tool die het beste past bij het probleem. Ik zoek een uitdagende omgeving waar technisch vernuft, robuustheid en veiligheid centraal staan.
+                Analytisch sterke en veelzijdige Lead Developer met een brede technische achtergrond. Ik ben een generalist die complexe materie en nieuwe talen razendsnel doorgrondt. Met een sterke focus op \textbf{codekwaliteit (DRY, SOLID)} en architectuur, bouw ik systemen die niet alleen werken, maar ook onderhoudbaar blijven. Met mijn ervaring in zowel development als management sla ik de brug tussen techniek en business. Ik zoek een omgeving waar technisch vernuft, robuustheid en veiligheid centraal staan.
             \end{quote}
         % ----- ABOUT ME -----
         
@@ -212,92 +211,83 @@
         \cvsection{Werkervaring}
             \cvevent{Lead Developer \& Software Architect}{Winst uit je woning}{Januari 2023 -- Heden}{Haarlem}
             \begin{itemize}
-                \item Verantwoordelijk voor de technische visie, security en de transitie naar een event-driven architectuur.
-                \item \textbf{Adaptievermogen:} In korte tijd diverse stacks (o.a. Odoo ERP, Mendix en AWS) eigen gemaakt om de nieuwe architectuur te leiden en verschillende systemen te integreren.
-                \item \textbf{Security:} Lead in security-audits met grootbanken (ING). Implementatie van ISO27001 maatregelen, mTLS en Custom JWT flows.
-                \item \textbf{Project GRIP:} Herontwerp van het core data model en implementatie van een message broker voor robuuste data-uitwisseling.
+                \item \textbf{Architectuur \& Visie:} Ontwerp en realisatie van de technische strategie voor de transitie naar een schaalbare event-driven architectuur.
+                \item \textbf{Systeemintegratie:} In korte tijd de tech-stack (Odoo, Mendix, AWS) eigen gemaakt om als architect de complexe integratie tussen deze systemen te leiden.
+                \item \textbf{Security:} Lead in audits met grootbanken (ING). Implementatie van ISO27001 maatregelen, mTLS en Custom JWT flows.
+                \item \textbf{Project GRIP:} Volledig herontwerp van het core datamodel en bouw van een 'message broker' voor robuuste data-uitwisseling.
             \end{itemize}
             \divider
             
             \cvevent{IT Manager, Lead developer \& Security Officer}{Winst uit je woning}{Maart 2020 -- December 2022}{Haarlem}
             \begin{itemize}
-                \item Opbouw en professionalisering van de interne IT-afdeling (gegroeid naar 7 werknemers). Introductie van CI/CD, Unit Testing en standaarden.
-                \item \textbf{ISO27001:} Als Security Officer het ISMS opgezet en het bedrijf succesvol door de certificering geleid.
-                \item Initiatiefnemer voor de transitie van legacy (Low-code/Podio) naar een volwassen Enterprise architectuur.
+                \item \textbf{Team \& Professionalisering:} Opbouw en coaching van het development team (gegroeid naar 7 developers). Introductie van CI/CD, Unit Testing en coding standards.
+                \item \textbf{ISO27001:} Als Security Officer het complete ISMS ingericht en geïmplementeerd, resulterend in een succesvolle certificering.
+                \item \textbf{Strategie:} Initiatiefnemer voor de cruciale transitie van legacy (Low-code/Podio) naar een schaalbare enterprise architectuur.
             \end{itemize}
             \divider
 
             \cvevent{Eigenaar / Full Stack Developer}{CRMDev (Freelance)}{Januari 2019 -- Maart 2020}{Hoorn}
             \begin{itemize}
-                \item Greenfield development van een schaalbaar processysteem (PHP, SQL, API's).
-                \item Verantwoordelijk voor full-stack: van Linux serverbeheer en hosting tot backend logica en frontend.
+                \item \textbf{Greenfield Development:} Volledige bouw van het bedrijfskritische core-systeem voor \textbf{Winst uit je woning}, dat de explosieve schaalvergroting van de klant faciliteerde.
+                \item \textbf{End-to-end Verantwoordelijk:} Van architectuur en Linux serverbeheer tot backend logica, frontend en de aansturing van een junior developer.
+                \item \textbf{Acquisitie:} Vanwege het strategische belang van de software gevraagd om bij hen in vaste dienst te treden en de kennis intern te borgen.
             \end{itemize}
             \divider
 
             \newpage
 
-            \cvevent{Lead developer / Solution Architect}{CRM Fabriek}{2018 (6 maanden)}{Amsterdam}
+            \cvevent{Lead Developer / Solution Architect}{CRM Fabriek}{2018 (6 maanden)}{Amsterdam}
             \begin{itemize}
-                \item Technisch aansturen van een team van 4 developers. Vertalen van business requirements naar technische oplossingen.
+                \item \textbf{Technical Lead:} Aansturen van 4 developers en coördinatie van lopende trajecten voor diverse klanten (multi-client environment).
+                \item \textbf{Solution Design:} Vertalen van klantwensen naar technische CRM-architecturen en integraties.
+                \item \textbf{Ondernemerschap:} De wens om processen efficiënter en kwalitatiever in te richten vormde hierna de aanleiding voor de start van mijn eigen onderneming.
             \end{itemize}
         % ----- EXPERIENCE -----
         
         % ----- EDUCATION -----
         \cvsection{Opleidingen}
-            \cvevent{Bachelor Computer Science (Niet afgerond)}{Vrije Universiteit}{2017 -- 2019}{Amsterdam}
-            \begin{itemize}
-                \item 123 ECTS behaald, gemiddeld cijfer: \textbf{7,6}.
-                \item Focus: Algoritmes, Datastructuren, Wiskunde (Java, C++, Python, Assembly).
-                \item Studie gestaakt voor ondernemerschap; academisch denkniveau aantoonbaar.
-            \end{itemize}
-            \divider
-            
-            \cvevent{Bachelor Informatica (Propedeuse fase)}{Universiteit van Amsterdam}{2016 -- 2017}{Amsterdam}
-            % \begin{itemize}
-            %     \item GPA: 1,23
-            % \end{itemize}
-            \divider
 
-            \cvevent{Tweetalig VWO (Natuur \& Gezondheid)}{Het Werenfridus}{2010 -- 2016}{Hoorn}
-            % \begin{itemize}
-                % \item 
-            % \end{itemize}
+        \cvevent{Bachelor Computer Science (123 ECTS behaald)}{Vrije Universiteit}{2017 -- 2019}{Amsterdam}
+        \begin{itemize}
+            \item \textbf{Resultaat:} Gemiddeld cijfer \textbf{7,6}.
+            \item \textbf{Focus:} Software Engineering, Algoritmes, Datastructuren, Wiskunde en Data Science.
+            \item \textbf{Talen:} Diepgaande kennis opgedaan van o.a. Java, C++, Python en Assembly.
+            \item \textbf{Ondernemerschap:} Studie bewust verruild voor de praktijk om fulltime te focussen op de groei van mijn eigen softwarebedrijf.
+            \item \textbf{Niveau:} Aantoonbaar WO werk- en denkniveau door behaalde resultaten en complexe vakkenpakket.
+        \end{itemize}
+        \divider
+        
+        \cvevent{Bachelor Informatica (Propedeuse fase)}{Universiteit van Amsterdam}{2016 -- 2017}{Amsterdam}
+        \begin{itemize}
+            \item Focus op de fundamenten van Object Oriented Programming en academische vorming.
+        \end{itemize}
+        \divider
+    
+        \cvevent{Tweetalig VWO (Natuur \& Gezondheid)}{Het Werenfridus}{2010 -- 2016}{Hoorn}
+        \begin{itemize}
+            \item Volledig tweetalig onderwijs (50\% van de vakken in het Engels). Afgesloten met een internationaal erkend certificaat.
+        \end{itemize}
         % ----- EDUCATION -----
 
         % ----- CERTIFICATES -----
         \cvsection{Certificaten}
+        
             \cvevent{Mendix Developer Certification: Rapid Developer}{Mendix Academy}{2025}{}
             \begin{itemize}
-                \item Behaald ter formalisering van jarenlange praktijkervaring met Mendix development en integraties.
+                \item Behaald ter formalisering van jarenlange praktijkervaring met Mendix development en \textbf{enterprise} integraties.
             \end{itemize}
             \divider
-
+        
             \cvevent{Informatiebeveiliging \& AVG}{Goodhabitz}{2024}{}
             \begin{itemize}
-                \item Verdieping op het gebied van compliance en awareness in het kader van ISO27001.
+                \item Verdieping op het gebied van compliance en security awareness, ter ondersteuning van mijn rol als \textbf{Security Officer} (ISO27001).
             \end{itemize}
             \divider
-
+        
             \cvevent{Cambridge English: Advanced (CAE)}{Cambridge English}{2014}{}
             \begin{itemize}
-                \item Internationaal erkend certificaat op C1-niveau, behaald als onderdeel van tweetalig onderwijs.
-            \end{itemize}
+                \item Internationaal erkend certificaat op C1-niveau (Advanced), behaald als afsluiting van tweetalig VWO.
+            \end{itemize}{itemize}
         % ----- CERTIFICATES -----
-        
-        % ----- PROJECTS -----
-        \cvsection{Projects}
-            \cvevent{Project 1 }{\cvreference{\faGithub}{https://github.com/user/repo}\cvreference{| \faGlobe}{https://project-demo.com/}}{Mm YYYY -- Mm YYYY}{}
-            \begin{itemize}
-                \item Item 1
-                \item Item 2
-            \end{itemize}
-            \divider
-            
-            \cvevent{Project 2 }{\cvreference{\faGitlab}{https://gitlab.com/user/repo}\cvreference{| \faGlobe}{https://project-demo.com/}}{Mm YYYY -- Mm YYYY}{}
-            \begin{itemize}
-                \item Item 1
-                \item Item 2
-            \end{itemize}
-        % ----- PROJECTS -----
     \end{paracol}
 \end{document}
